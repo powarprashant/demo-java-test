@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+        - name: demo-container
+          image: <your-docker-repo>/demo:latest
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: filebeat-config
+              mountPath: /usr/share/filebeat/filebeat.yml
+              subPath: filebeat.yml
+      volumes:
+        - name: filebeat-config
+          configMap:
+            name: filebeat-config
