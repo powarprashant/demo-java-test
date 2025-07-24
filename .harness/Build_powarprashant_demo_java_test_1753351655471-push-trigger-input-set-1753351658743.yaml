@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_powarprashant_demo_java_test_1753351655471-push-trigger-input-set
+  identifier: Build_powarprashant_demo_java_test_1753351655471pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: demojavatest
+  pipeline:
+    identifier: Build_powarprashant_demo_java_test_1753351655471
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
