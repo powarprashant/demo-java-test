@@ -1,3 +1,4 @@
+#Docker file to use when build is done in harness cloud runner
 #FROM eclipse-temurin:17-jdk-alpine
 #ARG JAR_FILE=build/libs/*.jar
 #COPY ${JAR_FILE} app.jar
